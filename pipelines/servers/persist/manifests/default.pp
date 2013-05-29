@@ -1,17 +1,18 @@
-exec { "apt-get update":
-  path => "/usr/bin",
-}
-package { "apache2":
-  ensure  => present,
-  require => Exec["apt-get update"],
-}
-service { "apache2":
-  ensure  => "running",
-  require => Package["apache2"],
-}
-file { "/var/www/sample-webapp":
-  ensure  => "link",
-  target  => "/vagrant/sample-webapp",
-  require => Package["apache2"],
-  notify  => Service["apache2"],
-}
+$ntp_server = "0.pool.ntp.org 1.pool.ntp.org 2.pool.ntp.org"
+
+$apache_php_script_memory = "xyzM"
+$apc_php_memory = "123" #MB
+
+$mysql_cache_memory = "abcMB"
+
+$root_mysql_password = "secret"
+
+$awo_mysql_db = "abc" #bitnami_wordpress
+$awo_mysql_user = "123" #bitnami
+$awo_mysql_pass = "secret"
+
+$se_mysql_db = "xyz"
+$se_mysql_user = "890"
+$se_mysql_pass = "secret"
+
+import "nodes"
