@@ -12,7 +12,8 @@ Vagrant.configure("2") do |config|
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   # config.vm.box_url = "http://domain.com/path/to/above.box"
-config.vm.forward_port 80, 8080, 5567
+config.vm.network :forwarded_port, guest: 80, host: 1080
+#auto_correct: true
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
@@ -48,6 +49,38 @@ config.vm.forward_port 80, 8080, 5567
   # View the documentation for the provider you're using for more
   # information on available options.
 
+config.vm.provision :shell, :inline => "apt-get install apache2"
+
+#svn
+config.vm.provision :shell, :inline => "apt-get install subversion"
+config.vm.provision :shell, :inline => "apt-get install libapache2-svn"
+#jenkins
+#config.vm.provision :shell, :inline => "wget http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war"
+
+config.vm.provision :shell, :inline => "apt-get install unzip"
+#tomcat
+#config.vm.provision :shell, :inline => "wget http://archive.apache.org/dist/tomcat/tomcat-5/v5.5.28/bin/apache-tomcat-5.5.28.zip"
+#config.vm.provision :shell, :inline => "wget http://archive.apache.org/dist/tomcat/tomcat-5/v5.5.28/bin/apache-tomcat-5.5.28-admin.zip"
+
+config.vm.provision :shell, :inline => "apt-get install tomcat6 -yfm"
+config.vm.provision :shell, :inline => "apt-get install tomcat6-admin -yfm"
+#config.vm.provision :shell, :inline => "unzip apache-tomcat-5.5.28-admin.zip -d /usr/local/"
+
+#maven
+config.vm.provision :shell, :inline => "apt-get install maven2 -yfm"
+#jenkins
+config.vm.provision :shell, :inline => "wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -"
+config.vm.provision :shell, :inline => "echo 'deb http://pkg.jenkins-ci.org/debian-stable binary/' >> /etc/apt/sources.list"
+config.vm.provision :shell, :inline => "apt-get update"
+config.vm.provision :shell, :inline => "apt-get install jenkins"
+
+#sonar
+config.vm.provision :shell, :inline => "wget http://dist.sonar.codehaus.org/sonar-3.6.zip"
+
+#nexus
+config.vm.provision :shell, :inline => "wget http://www.sonatype.org/downloads/nexus-latest-bundle.zip"
+# unzip
+# cp 
   # Enable provisioning with Puppet stand alone.  Puppet manifests
   # are contained in a directory path relative to this Vagrantfile.
   # You will need to create the manifests directory and a manifest in
