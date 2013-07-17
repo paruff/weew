@@ -19,7 +19,7 @@ public class BlogListener implements ServletContextListener {
     public void contextInitialized(ServletContextEvent event) {
         System.out.println("Setting up Prevayler.");
         try {
-            prevayler = PrevaylerFactory.createPrevayler(new Blog(), "/home/russell/persistence/files*");   
+            prevayler = PrevaylerFactory.createPrevayler(new Blog(), "/Users/philruff/persistence/files*");   
             event.getServletContext().setAttribute(PREVAYLER_KEY, prevayler);
         } catch (Exception e) {
             e.printStackTrace();

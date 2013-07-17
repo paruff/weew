@@ -12,8 +12,10 @@ Vagrant.configure("2") do |config|
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
   # config.vm.box_url = "http://domain.com/path/to/above.box"
-config.vm.network :forwarded_port, guest: 80, host: 1080
-#auto_correct: true
+#config.vm.network :private_network, ip: "192.168.50.4"
+ config.vm.network :forwarded_port, guest: 80, host: 1080, auto_correct: true
+ config.vm.network :forwarded_port, guest: 8080, host: 1081, auto_correct: true
+ config.vm.network :forwarded_port, guest: 8153, host: 1082, auto_correct: true
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
@@ -50,10 +52,17 @@ config.vm.network :forwarded_port, guest: 80, host: 1080
   # information on available options.
 
 config.vm.provision :shell, :inline => "apt-get install apache2"
-
+# Version control systems
 #svn
 config.vm.provision :shell, :inline => "apt-get install subversion"
 config.vm.provision :shell, :inline => "apt-get install libapache2-svn"
+
+# GIT
+config.vm.provision :shell, :inline => "apt-get install git"
+
+# Java
+config.vm.provision :shell, :inline => "apt-get install openjdk-6-jdk"
+
 #jenkins
 #config.vm.provision :shell, :inline => "wget http://mirrors.jenkins-ci.org/war-stable/latest/jenkins.war"
 
@@ -73,6 +82,12 @@ config.vm.provision :shell, :inline => "wget -q -O - http://pkg.jenkins-ci.org/d
 config.vm.provision :shell, :inline => "echo 'deb http://pkg.jenkins-ci.org/debian-stable binary/' >> /etc/apt/sources.list"
 config.vm.provision :shell, :inline => "apt-get update"
 config.vm.provision :shell, :inline => "apt-get install jenkins"
+
+# go
+config.vm.provision :shell, :inline => "wget -q -O - http://download01.thoughtworks.com/go/13.2/ga/go-agent-13.2.0-17155.deb"
+config.vm.provision :shell, :inline => "wget -q -O - http://download01.thoughtworks.com/go/13.2/ga/go-server-13.2.0-17155.deb"
+config.vm.provision :shell, :inline => "dpkg -i go-server-13.2.0.17155.deb"
+config.vm.provision :shell, :inline => "dpkg -i go-agent-13.2.0.17155.deb"
 
 #sonar
 config.vm.provision :shell, :inline => "wget http://dist.sonar.codehaus.org/sonar-3.6.zip"
