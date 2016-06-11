@@ -1,0 +1,237 @@
+{
+  "title": "AWS Solutions Architect associate",
+  "ideas": {
+    "3": {
+      "title": "Implementation/Deployment",
+      "attr": {
+        "attachment": {
+          "contentType": "text/html",
+          "content": "<p>\n      Identify the appropriate techniques and methods using Amazon EC2, Amazon S3, Elastic Beanstalk, Cloudformation, Amazon Virtual Private Cloud (VPC), and AWS Identity and Access Management (IAM) to code and implement a cloud solution.\n    </p>"
+        },
+        "style": {}
+      },
+      "ideas": {
+        "1": {
+          "title": "Configure an Amazon Machine Image (AMI)",
+          "id": 34
+        },
+        "2": {
+          "title": "Operate and extend service management in the private cloud",
+          "id": 35
+        },
+        "3": {
+          "title": "Configure compliance in the private and public cloud",
+          "id": 36
+        },
+        "4": {
+          "title": "Launching instances in a variety of geographical regions",
+          "id": 37
+        }
+      },
+      "id": 33
+    },
+    "4": {
+      "title": "Designing High available, cost efficient, fault tolerant, scalable systems",
+      "ideas": {
+        "1": {
+          "title": "Identify and recognize cloud architecture considerations, such as fundamental components and effective designs.",
+          "ideas": {
+            "1": {
+              "title": "How to design cloud services",
+              "id": 40
+            },
+            "2": {
+              "title": "Planning and design",
+              "id": 41
+            },
+            "3": {
+              "title": "Monitoring",
+              "id": 42
+            },
+            "4": {
+              "title": "Familiarity with",
+              "ideas": {
+                "1": {
+                  "title": "Best Practices",
+                  "id": 44
+                },
+                "2": {
+                  "title": "Developing to Client Specifications including pricing/cost (e.g., on Demand vs Reserved vs Spot, RTO and RPO DR Design)",
+                  "id": 45
+                },
+                "3": {
+                  "title": "Architectural trade-off decisions (high availability vs cost, Amazon Relational Database Service (RDS) vs installing your own database on Amazon Elastic Compute Cloud (EC2)",
+                  "id": 46
+                },
+                "4": {
+                  "title": "Integrating with existing development environments and building scalable architecture",
+                  "id": 47
+                },
+                "5": {
+                  "title": "Elasticity and scalability",
+                  "id": 48
+                }
+              },
+              "id": 43
+            }
+          },
+          "id": 39
+        }
+      },
+      "id": 38
+    },
+    "-1": {
+      "title": "Troubleshooting",
+      "ideas": {
+        "1": {
+          "title": "Information and questions",
+          "id": 50
+        }
+      },
+      "id": 49
+    },
+    "-0.5": {
+      "title": "Data Security",
+      "ideas": {
+        "1": {
+          "title": "Recognize and implement secure procedures for optimum cloud deployment and maintenance",
+          "ideas": {
+            "1": {
+              "title": "Cloud Security Best Practices",
+              "ideas": {
+                "1": {
+                  "title": "How to build and use a threat model",
+                  "id": 5
+                },
+                "2": {
+                  "title": "How to build and use a data flow diagram for risk management",
+                  "ideas": {
+                    "1": {
+                      "title": "Use cases",
+                      "id": 7
+                    },
+                    "2": {
+                      "title": "Abuse cases (Negative use cases)",
+                      "id": 8
+                    }
+                  },
+                  "id": 6
+                }
+              },
+              "id": 4
+            },
+            "2": {
+              "title": "Security Architecture with AWS",
+              "ideas": {
+                "1": {
+                  "title": "Shared Security Responsibility Model",
+                  "id": 10
+                },
+                "2": {
+                  "title": "AWS Platform Compliance",
+                  "id": 11
+                },
+                "3": {
+                  "title": "AWS Security attributes (customer workloads down to physical layer)",
+                  "id": 12
+                },
+                "4": {
+                  "title": "Security Services",
+                  "id": 13
+                },
+                "5": {
+                  "title": " AWS Identity and Access Management (IAM)",
+                  "id": 14
+                },
+                "6": {
+                  "title": "Amazon Virtual Private Cloud (VPC)",
+                  "id": 15
+                },
+                "7": {
+                  "title": "CIA and AAA models, ingress vs egress filtering, and which AWS service and features fit",
+                  "id": 16
+                },
+                "8": {
+                  "title": "\"Core\" Amazon EC2 and S3 security feature sets",
+                  "id": 17
+                },
+                "9": {
+                  "title": "Incorporating common conventional security products (Firewalls, IDS:HIDS/NIDS, SIEM, VPN)",
+                  "id": 18
+                },
+                "10": {
+                  "title": "Design Patterns",
+                  "id": 19
+                },
+                "11": {
+                  "title": "DDOS mitigation",
+                  "id": 20
+                },
+                "12": {
+                  "title": "Encryption solutions",
+                  "id": 21
+                },
+                "13": {
+                  "title": "Complex access controls (building sophisticated security groups, ACLs, etc)",
+                  "id": 22
+                },
+                "14": {
+                  "title": "Amazon CloudWatch for the security architect",
+                  "id": 23
+                }
+              },
+              "id": 9
+            }
+          },
+          "id": 3
+        },
+        "2": {
+          "title": "Recognize critical disaster recovery techniques and their implementation",
+          "ideas": {
+            "1": {
+              "title": "Disaster Recovery",
+              "ideas": {
+                "1": {
+                  "title": "Recovery time objective",
+                  "id": 26
+                },
+                "2": {
+                  "title": "Recovery point objective",
+                  "id": 27
+                },
+                "3": {
+                  "title": "Amazon Elastic Block Store",
+                  "id": 28
+                }
+              },
+              "id": 25
+            },
+            "2": {
+              "title": "AWS Import/Export",
+              "id": 29
+            },
+            "3": {
+              "title": "AWS Storage Gateway",
+              "id": 30
+            },
+            "4": {
+              "title": "Amazon Route53",
+              "id": 31
+            },
+            "5": {
+              "title": "Testing and recovered data",
+              "id": 32
+            }
+          },
+          "id": 24
+        }
+      },
+      "id": 2,
+      "attr": {
+        "style": {}
+      }
+    }
+  },
+  "formatVersion": 2,
+  "id": 1
+}
